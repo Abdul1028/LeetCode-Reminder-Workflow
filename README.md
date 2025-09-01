@@ -24,31 +24,7 @@ Click the `Use this template` button on GitHub to create a new repository based 
 
 Make sure GitHub Actions is enabled for your repository. The workflow will run based on the defined schedule.
 
-## Example Workflow Configuration
 
-```yaml
-name: LeetCode Reminder
-
-on:
-  schedule:
-    - cron: '0 9 * * MON' # Every Monday at 9 AM UTC
-
-jobs:
-  remind:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Send Reminder
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const message = "Don't forget to solve a LeetCode problem today! 💪";
-            github.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: 1,
-              body: message
-            });
-```
 
 > **Note:** You may need to adjust permissions and target issue numbers or notification channels as per your needs.
 
