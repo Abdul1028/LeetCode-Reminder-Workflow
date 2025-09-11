@@ -4,10 +4,10 @@ name: Send LeetCode Solution to slack with message
 on:
   schedule:
     
-    # Morning 9:00 AM IST
-    - cron: '30 3 * * *'
-    # Evening 9:00 PM IST
-    - cron: '30 15 * * *'
+    # # Morning 9:00 AM IST
+    # - cron: '30 3 * * *'
+    # # Evening 9:00 PM IST
+    # - cron: '30 15 * * *'
   workflow_dispatch:
 
 env:
